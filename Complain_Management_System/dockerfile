@@ -1,5 +1,4 @@
-ARG ACR
-FROM $ACR.azurecr.io/pybaseimage:latest
+FROM python:3.9.9-slim-buster
 
 WORKDIR /usr/src/app
 
