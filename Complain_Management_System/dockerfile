@@ -1,4 +1,5 @@
-FROM childcareregistry.azurecr.io/pybaseimage:latest
+ARG ACR
+FROM $ACR.azurecr.io/pybaseimage:latest
 
 WORKDIR /usr/src/app
 
