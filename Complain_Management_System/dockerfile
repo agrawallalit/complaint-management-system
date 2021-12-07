@@ -3,6 +3,8 @@ FROM childcareregistry.azurecr.io/pybaseimage:latest
 WORKDIR /usr/src/app
 
 COPY requirements.txt ./
+RUN apt-get update
+RUN apt-get install python3-dev default-libmysqlclient-dev build-essential
 RUN pip install --no-cache-dir -r requirements.txt 
 
 COPY . .
